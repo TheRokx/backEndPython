@@ -1,5 +1,7 @@
 #Ecrire :
 >> print(var)
+>> print("Bonjour", "à", "tous", sep ="*") 
+Bonjour*à*tous
 
 #Lire :
 >> annee = input("Saisissez une année : ")
@@ -56,6 +58,10 @@ for lettre in chaine:
   >> ch = "Christine"
   >> print(ch[0], ch[3], ch[5])
   C i t
+  >>> presentation[:2] # Du début jusqu'à la troisième lettre non comprise
+  'sa'
+  >>> presentation[2:] # De la troisième lettre (comprise) à la fin
+  lut'
 
   ##Concatenation
   >> a = ' Petit poisson ' 
@@ -77,6 +83,9 @@ continue : On retourne au while (ou au for) sans exécuter les autres lignes
 >> def NomFonction(parametre1, parametre2):
     instructions
     
+#Fonction lambda :
+>> f = lambda x: x * x
+
 #Les listes :
 >> jour = ['lundi', 'mardi', 'mercredi', 1800, 20.357, 'jeudi', 'vendredi']
 >> del(jour[4]) #supprimer 
@@ -84,6 +93,30 @@ continue : On retourne au while (ou au for) sans exécuter les autres lignes
 
 #Importer
 from math import *
+
+#Exceptions
+try:
+    # Bloc de test
+except type_de_l_exception as exception_retournee:
+    print("Voici l'erreur :", exception_retournee)
+try:
+    # Test d'instruction(s)
+except TypeDInstruction:
+    # Traitement en cas d'erreur
+finally:
+    # Instruction(s) exécutée(s) qu'il y ait eu des erreurs ou non 
+    
+#Convertir entier en string :
+str(entier)
+
+#Convertir string en entier :
+int(string)
+
+
+    
+    
+    
+
 
 https://openclassrooms.com/courses/apprenez-a-programmer-en-python/pas-a-pas-vers-la-modularite-1-2#/id/r-2231725
 http://python.developpez.com/cours/apprendre-python3/?page=page_8
