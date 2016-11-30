@@ -1,0 +1,52 @@
+#Programme qui analyse les adresseIPv4
+    
+print "Hello Young Engineer!\n"
+
+adresse = raw_input('Renter une adresse IPv4 ')
+
+print adresse
+
+k = 1
+
+number1 = ''
+number2 = ''
+number3 = ''
+number4 = ''
+
+for lettre in adresse:
+    if k == 1:
+        if lettre != '.' :
+            number1 += lettre
+        else:
+            k+= 1
+    elif k == 2:
+        if lettre != '.' :
+            number2 += lettre
+        else:
+            k+= 1
+    elif k == 3:
+        if lettre != '.' :
+            number3 += lettre
+        else:
+            k+= 1
+    elif k == 4:
+        if lettre != '.' :
+            number4 += lettre
+        else:
+            k+= 1
+
+number1 = int(number1)
+number2 = int(number2)
+number3 = int(number3)
+number4 = int(number4)
+
+if number1 > 0 and number1 < 127:
+  classeAdresse = "Adresse de classe A"
+elif number1 == 127:
+  classeAdresse = "Adresse de loopback"
+elif number1 > 127 and number1 < 192:
+  classeAdresse = "Adresse de classe B"
+elif number1 >= 192 and number1 < 224:
+  classeAdresse = "Adresse de classe C"
+  
+print classeAdresse
